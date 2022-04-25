@@ -1,0 +1,55 @@
+{
+    "system": {
+        "dataset": "APOLLOSIM_j",
+        "batch_size": 16,
+        "sampling_function": "kp_detection",
+
+        "train_split": "train",
+        "val_split": "train",
+        "test_split": "test",
+
+        "use_crop": false,
+
+        "learning_rate": 0.0001,
+        "decay_rate": 10,
+
+        "val_iter": 1000,
+        "display": 1000,
+
+        "opt_algo": "adam",
+        "prefetch_size": 5,
+
+        "max_iter": 500000,
+        "stepsize": 450000,
+        "snapshot": 5000,
+
+        "chunk_sizes": [16],
+
+        "cache_dir": "./CLGoZoos/IMG_Seq_Pv-Tv_standard/cache",
+        "result_dir": "./CLGoZoos/IMG_Seq_Pv-Tv_standard/results",
+        "dataset_name": "standard",
+        "data_dir": "./",
+
+        "res_layers": [1, 2, 2, 2],
+        "res_dims": [16, 32, 64, 128],
+        "res_strides": [1, 2, 2, 2],
+        "attn_dim": 32,
+        "dim_feedforward": 128,
+
+        "kps_dim": 14,
+
+        "num_heads": 2,
+        "enc_layers": 2,
+        "dec_layers": 2,
+        "block": "BasicBlock",
+        "bak_block": "BasicBlock-BottleNeck",
+        "num_queries": 7
+    },
+    
+    "db": {
+        "rand_color": true,
+        "input_size": [360, 480],
+        "test_scales": [1],
+        "categories": 1
+    }
+}
